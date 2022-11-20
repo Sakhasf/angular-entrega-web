@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-entrega-web';
+  title = 'Servidores';
+  year = new Date().getFullYear();
 }
