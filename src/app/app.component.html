@@ -1,26 +1,29 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <img src="assets/logo server2.webp"> 
+      <img src="assets/logo server2.webp">
     </div>
-    <div class="col col-md-10"> <!-- menu --> 
+    <div class="col col-md-10">
+      <!-- menu -->
       <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
           <li class="nav-item"><a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/servers']">Servers list</a></li>
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/webs']">Webs list</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Servers management</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Webs management</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/servers']">Servers management</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/webs']">Webs management</a></li>
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
         </ul>
       </header>
     </div>
 
     <router-outlet></router-outlet>
 
-    <div class="row justify-content-center"> <!-- footer -->     
-      <div class="col-md-4 d-flex align-items-left"> 
+    <div class="row justify-content-center">
+      <!-- footer -->
+      <div class="col-md-4 d-flex align-items-left">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
         </a>
         <span class="mb-3 mb-md-0 text-muted">© {{year}} Hosting manager, Inc </span>
       </div>
