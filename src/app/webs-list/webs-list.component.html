@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table table-striped ">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col"> Consumo de CPU </th>
+                <th scope="col"> Consumo de RAM </th>
+                <th scope="col"> Consumo de GPU </th>
+                <th scope="col"> Consumo de HDD </th>
+                <th scope="col"> Version </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let web of webs">
+                <td> {{web.consumoCPU}} </td>
+                <td> {{web.consumoRAM}} </td>
+                <td> {{web.consumoGPU}} </td>
+                <td> {{web.consumoHDD}} </td>
+                <td> {{web.version}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-striped" >
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Dirección IP</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let server of servers">
+                <td> {{server.nombre}} </td>
+                <td> {{server.ip}} </td>
+                <td> {{server.estado}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
