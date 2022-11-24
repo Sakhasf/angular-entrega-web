@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Web } from './Interfaces/web';
 import { enviroment } from 'src/enviroments/enviroment.prod';
 
-const URLW = enviroment.apiUrl + 'webs';
+const URLW = "https://servers-and-webs-api.onrender.com/webs" //enviroment.apiUrl + 'webs';
 
 @Injectable({
   providedIn: 'root'
