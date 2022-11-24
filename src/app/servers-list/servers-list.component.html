@@ -3,6 +3,7 @@
         <thead class="table-dark">
             <tr>
                 <th scope="col">Nombre</th>
+                <th scope="col">ID</th>
                 <th scope="col">Dirección IP</th>
                 <th scope="col">Estado</th>
             </tr>
@@ -10,9 +11,11 @@
         <tbody>
             <tr *ngFor="let server of servers">
                 <td> {{server.nombre}} </td>
+                <td> {{server.id}} </td>
                 <td> {{server.ip}} </td>
                 <td> {{server.estado}} </td>
             </tr>
         </tbody>
+        <td> <button type="button" class="btn btn-primary"[routerLink]="['/server-create']">Agregar servidor</button> </td>
     </table>
 </div>

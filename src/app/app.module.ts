@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ServersListComponent } from './servers-list/servers-list.component';
 import { WebsListComponent } from './webs-list/webs-list.component';
 import { ServersComponent } from './servers/servers.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { WebsComponent } from './webs/webs.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServerCreateComponent } from './server-create/server-create.component';
+import { WebCreateComponent } from './web-create/web-create.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,16 @@ import { HttpClientModule } from '@angular/common/http';
     ServersComponent,
     HomeComponent,
     WebsComponent,
-    ContactComponent
+    ContactComponent,
+    ServerCreateComponent,
+    WebCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, ServersListComponent, WebsListComponent]

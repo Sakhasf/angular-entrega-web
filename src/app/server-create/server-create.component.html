@@ -1,0 +1,15 @@
+<form [formGroup]="serverForm" (ngSubmit)="createServer()">
+    <div class="col">
+        <label for="nombre" class="form-label">*Nombre:</label>
+        <input type="string" class="form-control" formControlName="nombre">
+    </div>
+    <div class="col">
+        <label for="ip" class="form-label">Ip:</label>
+        <input type="string" class="form-control" formControlName="ip">
+    </div>
+    <div class="col">
+        <label for="estado" class="form-label">Estado:</label>
+        <input type="string" class="form-control" formControlName="estado">
+    </div>
+        <button type="submit" class="btn btn-primary"> Agregar </button> 
+</form>

@@ -1,0 +1,31 @@
+<form [formGroup]="webForm" (ngSubmit)="createWeb()">
+    <div class="col">
+        <label for="nombre" class="form-label">*Nombre:</label>
+        <input type="string" class="form-control" formControlName="nombre">
+    </div>
+    <div class="col">
+        <label for="ip" class="form-label">ConsumoCPU:</label>
+        <input type="number" class="form-control" formControlName="ip">
+    </div>
+    <div class="col">
+        <label for="estado" class="form-label">ConsumoGPU:</label>
+        <input type="number" class="form-control" formControlName="estado">
+    </div>
+    <div class="col">
+        <label for="consumoRAM" class="form-label">ConsumoRAM:</label>
+        <input type="number" class="form-control" formControlName="consumoRAM">
+    </div>
+    <div class="col">
+        <label for="consumoHDD" class="form-label">ConsumoHDD:</label>
+        <input type="number" class="form-control" formControlName="consumoHDD">
+    </div>
+    <div class="col">
+        <label for="version" class="form-label">Version:</label>
+        <input type="number" class="form-control" formControlName="version">
+    </div>
+    <div class="col">
+        <label for="servidor" class="form-label">ID del servidor:</label>
+        <input type="number" class="form-control" formControlName="servidor">
+    </div>
+        <button type="submit" class="btn btn-primary"> Agregar </button> 
+</form>

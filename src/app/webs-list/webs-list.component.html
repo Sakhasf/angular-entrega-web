@@ -2,6 +2,8 @@
     <table class="table table-striped ">
         <thead class="table-dark">
             <tr>
+                <th scope="col"> Alojada en</th>
+                <th scope="col"> Nombre </th>
                 <th scope="col"> Consumo de CPU </th>
                 <th scope="col"> Consumo de RAM </th>
                 <th scope="col"> Consumo de GPU </th>
@@ -12,6 +14,11 @@
 
         <tbody>
             <tr *ngFor="let web of webs">
+                <div *ngIf='web.servidor !== null; else elseBlock'> 
+                    <td> {{web.servidor.nombre}} </td>
+                </div>
+                <ng-template #elseBlock> <td> Localhost </td></ng-template> 
+                <td> {{web.nombre}} </td>
                 <td> {{web.consumoCPU}} </td>
                 <td> {{web.consumoRAM}} </td>
                 <td> {{web.consumoGPU}} </td>
@@ -19,5 +26,6 @@
                 <td> {{web.version}} </td>
             </tr>
         </tbody>
+        <td> <button type="button" class="btn btn-primary"[routerLink]="['/web-create']">Agregar web</button> </td>
     </table>
 </div>

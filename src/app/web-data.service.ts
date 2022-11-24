@@ -15,4 +15,14 @@ export class WebDataService {
   public getAll(): Observable<Web[]>{
     return this.http.get<Web[]>(URLW);
   }
+  public create(web:any): void{
+    this.http.post<Web>(URLW,web).subscribe({
+      next: data =>{
+        console.log(data);
+      },
+      error : error => {
+        console.log('hubo un error', error);
+      }
+    })
+  }
 }

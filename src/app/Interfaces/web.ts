@@ -1,7 +1,11 @@
+import {Server} from './server'
+
 export interface Web {
-    consumoCPU: number;
-    consumoRAM: number;
-    consumoGPU: number;
-    consumoHDD: number;
-    version: number;
+    nombre: string;
+    consumoCPU?: number;
+    consumoRAM?: number;
+    consumoGPU?: number;
+    consumoHDD?: number;
+    version?: number;
+    servidor: Server | null;
 }
