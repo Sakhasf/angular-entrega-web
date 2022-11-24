@@ -26,6 +26,5 @@ export class ServidorDataService {
         console.log('hubo un error', error);
       }
     })
-    this.router.navigate(['/servers']) .then(() => {window.location.reload()});
   }
 }
