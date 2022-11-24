@@ -2,10 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ServersListComponent } from '../servers-list/servers-list.component';
 import { WebDataService } from '../web-data.service';
-
-const URLS = "http;//localhost/servidores"
 
 @Component({
   selector: 'web-create',
