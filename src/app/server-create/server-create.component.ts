@@ -15,7 +15,7 @@ export class ServerCreateComponent implements OnInit {
   serverForm = new FormGroup({
     nombre: new FormControl(null),
     ip: new FormControl('Sin asignar'),
-    estado: new FormControl('Sin asignar'),
+    estado: new FormControl('Desconocido'),
     web: new FormControl(null),
   });
 
