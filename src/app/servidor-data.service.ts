@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
 
-const URLS = "http://localhost:3000/servidores"
+const URLS = "https://servers-and-webs-api.onrender.com/servidores"
 
 @Injectable({
   providedIn: 'root'

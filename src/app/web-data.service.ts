@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Web } from './Interfaces/web';
 
-const URLW = "http://localhost:3000/webs"
+const URLW = "https://servers-and-webs-api.onrender.com/webs"
 
 @Injectable({
   providedIn: 'root'
