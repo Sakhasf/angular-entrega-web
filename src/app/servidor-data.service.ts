@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
-import { enviroment } from 'src/enviroments/enviroment.prod';
+import { enviroment } from 'src/enviroments/enviroment';
 
-const URLS = enviroment.apiUrl;
+const URLS = enviroment.apiUrl + '/servidores';
 
 @Injectable({
   providedIn: 'root'
