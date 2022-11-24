@@ -39,7 +39,7 @@ export class WebCreateComponent implements OnInit {
     } else {
         try {
           this.webDataService.create(this.webForm.value);
-          this.router.navigate(['/webs']) }// .then(() => {window.location.reload()}) }
+          this.router.navigate(['/webs']) .then(() => {window.location.reload()}) }
           catch {
              throw new Error('La id del servidor no es valida'); 
         }

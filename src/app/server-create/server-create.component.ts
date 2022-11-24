@@ -28,7 +28,7 @@ export class ServerCreateComponent implements OnInit {
         throw new Error('El nombre es obligatorio para agregar un servidor');
       } else {
           this.servidorDataService.create(this.serverForm.value);
-          this.router.navigate(['/servers']) //.then(() => {window.location.reload()}) 
+          this.router.navigate(['/servers']) .then(() => {window.location.reload()}) 
       }
     }
     
