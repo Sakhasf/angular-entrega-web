@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
 import { WebDataService } from '../web-data.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { WebDataService } from '../web-data.service';
 })
 export class WebCreateComponent implements OnInit {
 
-  constructor(private webDataService : WebDataService, private router : Router, private http: HttpClient){}
+  constructor(private webDataService : WebDataService, private http: HttpClient){}
 
   ngOnInit(): void {
 
@@ -42,6 +41,5 @@ export class WebCreateComponent implements OnInit {
              throw new Error('La id del servidor no es valida'); 
         }
     }
-    this.router.navigate(['/webs']) .then(() => {window.location.reload()});
   }
 }

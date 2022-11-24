@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
 import { enviroment } from 'src/enviroments/enviroment.prod';
+import { Router } from '@angular/router';
 
 const URLS = enviroment.apiUrl + 'servidores';
 
@@ -11,7 +12,7 @@ const URLS = enviroment.apiUrl + 'servidores';
 })
 export class ServidorDataService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private router : Router) { }
 
   public getAll(): Observable<Server[]>{
     return this.http.get<Server[]>(URLS);
@@ -25,5 +26,6 @@ export class ServidorDataService {
         console.log('hubo un error', error);
       }
     })
+    this.router.navigate(['/servers']) .then(() => {window.location.reload()});
   }
 }

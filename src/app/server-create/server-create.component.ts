@@ -10,7 +10,7 @@ import { ServidorDataService } from '../servidor-data.service';
 })
 export class ServerCreateComponent implements OnInit {
 
-  constructor (private servidorDataService : ServidorDataService, private router:Router ) {}
+  constructor (private servidorDataService : ServidorDataService ) {}
 
   serverForm = new FormGroup({
     nombre: new FormControl(null),
@@ -29,7 +29,6 @@ export class ServerCreateComponent implements OnInit {
       } else {
           this.servidorDataService.create(this.serverForm.value);
       }
-      this.router.navigate(['/servers']) .then(() => {window.location.reload()});
     }
 }
 
