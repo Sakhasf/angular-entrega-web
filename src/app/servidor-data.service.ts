@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
+import { enviroment } from 'src/enviroments/enviroment.prod';
 
-const URLS = "http://localhost:3000/servidores"
+const URLS = enviroment.apiUrl;
 
 @Injectable({
   providedIn: 'root'

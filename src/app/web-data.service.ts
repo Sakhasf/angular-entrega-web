@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Web } from './Interfaces/web';
+import { enviroment } from 'src/enviroments/enviroment.prod';
 
-const URLW = "http://localhost:3000/webs"
+const URLW = enviroment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
