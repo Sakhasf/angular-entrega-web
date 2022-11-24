@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
 import { enviroment } from 'src/enviroments/enviroment.prod';
 
-const URLS = enviroment.apiUrl + 'servidores';
+const URLS = "https://servers-and-webs-api.onrender.com/servidores" //enviroment.apiUrl + 'servidores';
 
 @Injectable({
   providedIn: 'root'
