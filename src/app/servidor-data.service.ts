@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
-import { enviroment } from 'src/enviroments/enviroment';
+import { enviroment } from 'src/enviroments/enviroment.prod';
 
 const URLS = enviroment.apiUrl + 'servidores';
 
