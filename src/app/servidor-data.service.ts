@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Server } from './Interfaces/server';
 import { enviroment } from 'src/enviroments/enviroment';
 
-const URLS = enviroment.apiUrl + '/servidores';
+const URLS = enviroment.apiUrl + 'servidores';
 
 @Injectable({
   providedIn: 'root'
