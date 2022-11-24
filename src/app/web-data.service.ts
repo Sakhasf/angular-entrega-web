@@ -26,6 +26,9 @@ export class WebDataService {
         console.log('hubo un error', error);
       }
     })
-
+    setTimeout(() =>
+    { 
+      this.router.navigate(['/webs']) .then(() => {window.location.reload()})
+    }, 1000); 
   }
 }
