@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WebListComponent } from './webs-list.component';
+import { WebsListComponent } from './webs-list.component';
 
-describe('WebListComponent', () => {
-  let component: WebListComponent;
-  let fixture: ComponentFixture<WebListComponent>;
+describe('WebsListComponent', () => {
+  let component: WebsListComponent;
+  let fixture: ComponentFixture<WebsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WebListComponent ]
+      declarations: [ WebsListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WebListComponent);
+    fixture = TestBed.createComponent(WebsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

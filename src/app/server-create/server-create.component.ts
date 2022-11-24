@@ -10,7 +10,7 @@ import { ServidorDataService } from '../servidor-data.service';
 })
 export class ServerCreateComponent implements OnInit {
 
-  constructor (private servidorDataService : ServidorDataService ) {}
+  constructor (private servidorDataService : ServidorDataService, private router : Router ) {}
 
   serverForm = new FormGroup({
     nombre: new FormControl(null),
@@ -23,11 +23,12 @@ export class ServerCreateComponent implements OnInit {
 
     }
 
-    createServer(): void {
+    async createServer(): Promise<void> {
       if(this.serverForm.value.nombre === null){
         throw new Error('El nombre es obligatorio para agregar un servidor');
       } else {
-          this.servidorDataService.create(this.serverForm.value);
+          await this.servidorDataService.create(this.serverForm.value);
+          this.router.navigate(['/servers']) .then(() => {window.location.reload()}); 
       }
     }
 }

@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { WebDataService } from '../web-data.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { WebDataService } from '../web-data.service';
 })
 export class WebCreateComponent implements OnInit {
 
-  constructor(private webDataService : WebDataService, private http: HttpClient){}
+  constructor(private webDataService : WebDataService, private http: HttpClient, private router : Router){}
 
   ngOnInit(): void {
 
@@ -26,7 +27,7 @@ export class WebCreateComponent implements OnInit {
     servidor: new FormControl(null)
   });
 
-  createWeb(): void {
+  async createWeb(): Promise<void> {
     if(this.webForm.value.nombre === null){
       throw new Error('El nombre es obligatorio para agregar una web');
     }
@@ -34,8 +35,8 @@ export class WebCreateComponent implements OnInit {
       throw new Error('La id del servidor no es valida');
     } else {
         try {
-          this.webDataService.create(this.webForm.value);
-          console.log(this.webForm.value);
+          await this.webDataService.create(this.webForm.value);
+          this.router.navigate(['/webs']) .then(() => {window.location.reload()}); 
         }
           catch {
              throw new Error('La id del servidor no es valida'); 
