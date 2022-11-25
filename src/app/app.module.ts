@@ -34,6 +34,6 @@ import { WebCreateComponent } from './web-create/web-create.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, ServersListComponent, WebsListComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
