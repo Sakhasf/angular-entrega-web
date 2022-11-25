@@ -21,15 +21,15 @@ export class ServidorDataService {
     this.http.post<Server>(URLS,server).subscribe({
       next: data =>{
         console.log(data);
-        
+        this.router.navigate(['/servers']).then(() => {window.location.reload()})  
       },
       error : error => {
         console.log('hubo un error', error);
       }
     }) 
-    setTimeout(() =>
-    { 
-      this.router.navigate(['/servers']) .then(() => {window.location.reload()})
-    }, 1000); 
+    // setTimeout(() =>
+    // { 
+    //   this.router.navigate(['/servers']) .then(() => {window.location.reload()})
+    // }, 1000); 
   }
 }

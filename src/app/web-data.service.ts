@@ -21,14 +21,15 @@ export class WebDataService {
     this.http.post<Web>(URLW,web).subscribe({
       next: data =>{
         console.log(data);
+        this.router.navigate(['/webs']).then(() => {window.location.reload()})  
       },
       error : error => {
         console.log('hubo un error', error);
       }
     })
-    setTimeout(() =>
-    { 
-      this.router.navigate(['/webs']) .then(() => {window.location.reload()})
-    }, 1000); 
+    // setTimeout(() =>
+    // { 
+    //   this.router.navigate(['/webs']) .then(() => {window.location.reload()})
+    // }, 1000); 
   }
 }
