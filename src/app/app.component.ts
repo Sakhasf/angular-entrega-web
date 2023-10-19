@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Servidores';
+  title = 'Bienvenidos a hosting manager!';
   year = new Date().getFullYear();
 }
