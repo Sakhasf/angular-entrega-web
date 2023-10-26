@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-
+const currentYear = new Date().getFullYear();
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,9 +26,9 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Bienvenidos a hosting manager!');
   });
 
-  it(`should have as year '2023'`, () => {
+  it(`should have current year`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.year).toEqual(2023);
+    expect(app.year).toEqual(currentYear);
   });
 });
