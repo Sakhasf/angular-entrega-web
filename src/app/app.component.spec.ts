@@ -29,6 +29,6 @@ describe('AppComponent', () => {
   it(`should have as year '2023'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.year).toEqual(2024);
+    expect(app.year).toEqual(2023);
   });
 });
