@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/Sakhasf/angular-entrega-web/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/Sakhasf/angular-entrega-web/actions/workflows/tests.yml)
+
 # AngularEntregaWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
