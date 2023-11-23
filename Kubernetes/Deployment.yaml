@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end-Deployment
+  labels:
+    app: front-end
+spec:
+  replicas: 1
+  selector:
+    matchlabels:
+      app: front-end
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+        - name: angular
+          image: kubernetes/angular_test 
+          imagePullPolicy: "Always"
+          ports:
+          - containerPort: 4200
