@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front-end-Deployment
+  name: front-end-deployment
   labels:
     app: front-end
 spec:
-  replicas: 1
+  replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: front-end
   template:
     metadata:
@@ -15,8 +15,8 @@ spec:
         app: front-end
     spec:
       containers:
-        - name: angular
-          image: kubernetes/angular_test 
-          imagePullPolicy: "Always"
-          ports:
-          - containerPort: 4200
+      - name: angular
+        image: sakhasf/front-end:kubernetes
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 4200
